@@ -8,10 +8,10 @@
 * create a back button to navigate you back to the home page.
 
 ## Home page :
-<img src="./screenshot/main.png"/>
+<img src="./screenshots/main.png"/>
 
 ## Add Task page :
-<img src="./screenshot/addTask.png"/>
+<img src="./screenshots/addTask.png"/>
 
 ## All Task page :
-<img src="./screenshot/allTask.png"/>
+<img src="./screenshots/allTask.png"/>
