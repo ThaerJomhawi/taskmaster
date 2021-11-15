@@ -8,7 +8,7 @@
 * create a back button to navigate you back to the home page.
 
 # Home page :
-<img src="screenshot/main.png"/>
+![main](./screenshot/addTask.png)
 
 # Add Task page :
 <img src="screenshot/addTask.png"/>
