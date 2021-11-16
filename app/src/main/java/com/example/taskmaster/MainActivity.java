@@ -1,6 +1,8 @@
 package com.example.taskmaster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,23 +12,19 @@ import android.view.*;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class MainActivity extends AppCompatActivity {
-
-    Button addTask , allTasks,Lorem1,Lorem2 ,Lorem3 ,setting;
-    SharedPreferences sharedPreferences;
-    String username;
-    TextView usernameField;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        addTask = (Button) findViewById(R.id.addTask);
+        Button addTask = (Button) findViewById(R.id.addTask);
         addTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        allTasks = (Button) findViewById(R.id.allTasks);
+        Button allTasks = (Button) findViewById(R.id.allTasks);
         allTasks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,73 +44,43 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-        // Lorem-------------------//
-        Lorem1 = findViewById(R.id.loremButton1);
-        Lorem1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String loremText1=Lorem1.getText().toString();
-                Intent goToLorem1=new Intent(MainActivity.this,TaskDetail.class);
-                goToLorem1.putExtra("title",loremText1);
-                startActivity(goToLorem1);
-            }
-        });
-
-
-        Lorem2 = findViewById(R.id.loremButton2);
-        Lorem2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String loremText2 = Lorem2.getText().toString();
-                Intent goToLorem2 = new Intent(MainActivity.this, TaskDetail.class);
-                goToLorem2.putExtra("title",loremText2);
-                startActivity(goToLorem2);
-
-            }
-
-        });
-
-
-
-
-        Lorem3 = findViewById(R.id.loremButton3);
-        Lorem3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String loremText3 = Lorem3.getText().toString();
-                Intent goToLorem3 = new Intent(MainActivity.this, TaskDetail.class);
-                goToLorem3.putExtra("title",loremText3);
-                startActivity(goToLorem3);
-
-
-            }
-        });
-
-
-
-
-        setting = findViewById(R.id.settingsButton);
+        Button setting = findViewById(R.id.settingsButton);
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToSettingsPage = new Intent(MainActivity.this, Settings.class);
-                startActivity(goToSettingsPage);
+                Intent goToSettings = new Intent(MainActivity.this, Settings.class);
+                startActivity(goToSettings);
             }
         });
+
+
+        List<Task> allTasksData = new ArrayList<>();
+        allTasksData.add(new Task("First Task","this is the First Task body","new"));
+        allTasksData.add(new Task("Second Task","this is the Second Task body","new"));
+        allTasksData.add(new Task("Third Task","this is the Third Task body","new"));
+        allTasksData.add(new Task("Fourth Task","this is the Fourth Task body","new"));
+        allTasksData.add(new Task("Fifth Task","this is the Fifth Task body","new"));
+        allTasksData.add(new Task("Sixth Task","this is the Sixth Task body","new"));
+        allTasksData.add(new Task("Seventh Task","this is the Seventh Task body","new"));
+        allTasksData.add(new Task("Eighth Task","this is the Eighth Task body","new"));
+
+        RecyclerView allTasksRecuclerView = findViewById(R.id.tasksRecucleView);
+        allTasksRecuclerView.setLayoutManager(new LinearLayoutManager(this));
+        allTasksRecuclerView.setAdapter(new TaskAdapter(allTasksData));
+
     }
+
 
 
     @Override
     protected void onStart() {
         super.onStart();
 
+        String tasks = "'s Tasks";
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+        String username = sharedPreferences.getString("username", "user");
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        username = sharedPreferences.getString("username1", "userName");
-
-        usernameField = findViewById(R.id.userNameView);
-        usernameField.setText(username );
+        TextView usernameField = findViewById(R.id.textView3);
+        usernameField.setText(username + tasks);
     }
 }
