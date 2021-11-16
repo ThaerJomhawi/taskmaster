@@ -8,10 +8,22 @@
 * create a back button to navigate you back to the home page.
 
 ## Home page :
-<img src="./screenshots/main.png"/>
+<img src="./screenshots/main.png" height="400"/>
 
 ## Add Task page :
-<img src="./screenshots/addTask.png"/>
+<img src="./screenshots/addTask.png"  height="400"/>
 
 ## All Task page :
-<img src="./screenshots/allTask.png"/>
+<img src="./screenshots/allTask.png" height="400"/>
+
+# settings page :
+<img src="screenshot/addTask.png" height="400" />
+
+# Lorem1 page :
+<img src="screenshot/lorem1.png" height="400" />
+
+# Lorem2 page :
+<img src="screenshot/lorem2.png" height="400" />
+
+# Lorem1 page :
+<img src="screenshot/lorem3.png" height="400" />
