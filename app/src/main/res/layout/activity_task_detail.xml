@@ -7,40 +7,35 @@
     tools:context=".TaskDetail">
 
     <TextView
-        android:id="@+id/detailPageTitle"
+        android:id="@+id/taskTitleDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
-        android:textSize="34sp"
+        android:text="Task Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.084" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="342dp"
-        android:layout_height="339dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan metus vitae magna venenatis egestas. Pellentesque lorem turpis, ultrices vitae molestie et, consequat a elit. Curabitur nulla justo, egestas non elementum quis, faucibus eget sapien. In hac habitasse platea dictumst. Maecenas nec eleifend ex. In malesuada sagittis est et egestas. Sed condimentum iaculis metus condimentum auctor. Ut luctus venenatis interdum. Curabitur efficitur laoreet nulla, sit amet blandit sem pretium in. Pellentesque vel ante blandit, tincidunt odio at, elementum odio. Pellentesque elementum justo eu urna pulvinar consequat. Maecenas interdum dui quis lorem lacinia tristique. Nulla ac libero viverra, volutpat erat non, vulputate nibh. Curabitur accumsan quam sed leo facilisis faucibus. Vestibulum semper ornare finibus. Donec nec euismod ante. Morbi id sem at lorem blandit egestas maximus ac tellus. Donec eget sodales nisl.  "
+        android:id="@+id/textView2"
+        android:layout_width="283dp"
+        android:layout_height="508dp"
+        android:text="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailPageTitle"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintTop_toBottomOf="@+id/taskTitleDetail"
+        app:layout_constraintVertical_bias="0.222" />
 
-    <TextView
-        android:id="@+id/textView9"
+    <Button
+        android:id="@+id/homeButtonDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="descreption"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailPageTitle"
-        app:layout_constraintVertical_bias="0.869" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
