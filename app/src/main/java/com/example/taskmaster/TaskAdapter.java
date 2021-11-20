@@ -1,37 +1,33 @@
 package com.example.taskmaster;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder>{
-    List<Task> allTasks = new ArrayList<>();
 
+    ArrayList<Task> tasksList = new ArrayList<Task>();
 
-    public TaskAdapter(List<Task> allTasks){
-        this.allTasks = allTasks;
+    public TaskAdapter(ArrayList<Task> tasksList) {
+        this.tasksList = tasksList;
     }
 
     public static class TaskViewHolder extends RecyclerView.ViewHolder{
-
-        View itemView;
         public Task task;
+        View itemView;
 
-
-
-        public TaskViewHolder(@NonNull View itemView) {
+        public TaskViewHolder (@NonNull View itemView){
             super(itemView);
             this.itemView = itemView;
         }
     }
+
     @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -40,20 +36,20 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         return taskViewHolder;
     }
 
-
     @Override
-    public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
-        holder.task = allTasks.get(position);
+    public void onBindViewHolder(@NonNull TaskAdapter.TaskViewHolder holder, int position) {
+        holder.task = tasksList.get(position);
+        TextView title = holder.itemView.findViewById(R.id.titleInFrag);
+        TextView body = holder.itemView.findViewById(R.id.bodyInFrag);
+        TextView state = holder.itemView.findViewById(R.id.stateInFrag);
 
-        Button taskButton = holder.itemView.findViewById(R.id.taskFragmentButton);
-
-        taskButton.setText(holder.task.title);
-
-
+        title.setText(holder.task.title);
+        body.setText(holder.task.body);
+        state.setText(holder.task.state);
     }
 
     @Override
     public int getItemCount() {
-        return allTasks.size();
+        return tasksList.size();
     }
 }
