@@ -1,0 +1,15 @@
+{
+  "thaer": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-thaertaskmaster-thaer-210306-authRole",
+      "UnauthRoleArn": "arn:aws:iam::915835842582:role/amplify-thaertaskmaster-thaer-210306-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::915835842582:role/amplify-thaertaskmaster-thaer-210306-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-thaertaskmaster-thaer-210306-deployment",
+      "UnauthRoleName": "amplify-thaertaskmaster-thaer-210306-unauthRole",
+      "StackName": "amplify-thaertaskmaster-thaer-210306",
+      "StackId": "arn:aws:cloudformation:us-east-1:915835842582:stack/amplify-thaertaskmaster-thaer-210306/d4776010-507d-11ec-96a6-12717d05e7c7",
+      "AmplifyAppId": "d3d4e4ba4zjbkh"
+    }
+  }
+}
